@@ -1,0 +1,480 @@
+html,
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+* {
+    outline: none;
+}
+
+.header-jumbotron {
+    height: 45vh;
+    margin-bottom: 0px;
+    background-image: url("../image/cloud_bg_0.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    animation: jumbbg 600s linear infinite;
+    border-radius: 6px;
+    padding: 0px !important;
+}
+
+@keyframes jumbbg {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* .jumbotron img {
+    width: 100%;
+    height: auto;
+} */
+
+/*  pc端 */
+@media only screen and (min-width: 650px) {
+    .phone-navbar {
+        display: none;
+    }
+
+    .container {
+        margin-left: 35vw !important;
+        width: 50vw !important;
+        padding: 0px;
+        min-width: 650px;
+    }
+
+    /* .col-sm-4 {
+        min-width: 250px;
+    } */
+
+    .info-panel {
+        z-index: 99;
+        position: absolute;
+        width: 20vw;
+        height: auto;
+        left: 15vw;
+        top: 45vh;
+        background-color: aliceblue;
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+}
+
+/*移动端显示*/
+@media screen and (max-width: 650px) {
+    .info-panel {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        background-color: aliceblue;
+        top: 0px;
+        left: -100vw;
+        z-index: 999;
+        transition: all 0.5s;
+    }
+    .pc-auto-page {
+        display: none;
+    }
+
+    .container {
+        margin-bottom: 100px;
+    }
+
+    .phone-navbar {
+        background-color: #16a085 !important;
+    }
+
+    .my-portrait {
+        height: 120px;
+        width: 120px;
+        border: 2px solid #82ccdd;
+        border-radius: 50%;
+        margin-top: -0px !important;
+    }
+}
+
+.container {
+    height: auto;
+    /* border: 2px solid red; */
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+    display: none;
+
+}
+
+.sub-navbar {
+    background-color: #16a085;
+}
+
+
+.col {
+    border: 1px solid gray;
+    height: 100%;
+    position: relative;
+}
+
+
+.search-div {
+    width: 100%;
+    height: 46px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.search-div div {
+    border-radius: 20px;
+    width: auto;
+    border: 1px solid #38ada9;
+    padding-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-div div input {
+    border: none;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    border-radius: 20px;
+}
+
+.search-div div button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    background-color: #16a085;
+    color: #ffffff;
+    border-radius: 50%;
+    margin-left: 5px;
+    /* margin-bottom: 5px; */
+}
+
+/* .search-div input {
+    outline: none;
+    height: 100%;
+    border: 1px solid #38ada9;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    padding-left: 10px;
+} */
+.dairy-bookstore {
+    height: 250px;
+    /* margin-top: 40px; */
+}
+
+.col-sm-4 {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dairy-book-item {
+    width: 100%;
+    height: 100%;
+    /* background-color: #4a69bd; */
+    background-color: aliceblue;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+
+}
+
+.dairy-book-item-icon {
+    /*日记本图标*/
+    width: 100%;
+    height: 150px;
+    background-color: #16a085;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 6px;
+}
+
+.icon-circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgba(236, 240, 241, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dairy-book-item-icon span {
+    color: #ffffff;
+    font-size: 2.8rem;
+    transition: all 0.9s;
+}
+
+.dairy-book-item-icon:hover span {
+    color: #95a5a6;
+}
+
+.dairy-book-item-des {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(149, 165, 166, 1.0);
+    /* background-color: chocolate; */
+}
+
+.dairy-book-item-createtime {
+    width: 100%;
+    height: 50px;
+    /* background-color: crimson; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-category {
+    /*笔记本类别*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 1.0rem;
+    color: rgba(46, 204, 113, 1.0);
+}
+.book-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 1.0rem;
+    color: red;
+    display: none;
+}
+
+.book-date {
+    /*笔记本创建日期*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    font-size: 0.8rem;
+}
+
+.auto-page {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination {
+    width: 60px;
+    height: 36px;
+}
+
+.page-link {
+    color: #16a085 !important;
+}
+
+.active a {
+    background-color: #16a085 !important;
+    color: #ffffff !important;
+}
+
+.footer {
+    text-align: center;
+    height: 80px;
+    background-color: #ffffff;
+    width: 100vw;
+    /* margin-top: 10px; */
+    line-height: 80px;
+    bottom: 0px;
+    position: fixed;
+    z-index: 100;
+    /*最高级*/
+}
+
+/* My infor panel */
+
+.my-portrait {
+    height: 120px;
+    width: 120px;
+    border: 2px solid #82ccdd;
+;
+    border-radius: 50%;
+
+    margin-top: -25%;
+}
+
+.my-portrait img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.my-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.dairy-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    padding: 10px;
+    flex-wrap: wrap;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: #718093;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.info-wrapper {
+    margin-bottom: 100px;
+}
+
+.dairy-wrapper {
+    margin-bottom: 100px;
+}
+
+/*.dairy-item:hover {*/
+/*    background-color: #16a085;*/
+/*    color: #ffffff;*/
+/*}*/
+
+.dairy-opr {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    color: #16a085;
+}
+
+.my-nick {
+    width: 100%;
+    /* margin-top: -20%; */
+    padding-top: 10px;
+}
+
+.my-personalized {
+    color: #95a5a6;
+}
+
+.statistics-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.my-share {
+    display: flex;
+    justify-content: space-around;
+    /* color: #95a5a6; */
+    font-size: 1.5rem;
+}
+
+.fa {
+    cursor: pointer;
+}
+
+/* ---------------------------------------BUI FFFFFFFFFFFFFFFFFFFFFFSSSS */
+.bigger {
+    transform: scale(5, 5);
+    transition: all 1s;
+    z-index: 100;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.pillar {
+    position: absolute;
+    top: 45vh;
+    z-index: -99;
+    opacity: 0;
+    height: 100%;
+    width: 3.1415926px;
+    visibility: hidden;
+    background-color: #718093;
+
+}
+
+/*jumbotron 中的名言*/
+.jumbotron-inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 96, 111, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: Microsoft JhengHei;
+}
+
+/*move to @media PC*/
+.jumbotron-inner div {
+    width: 50vw;
+    height: auto;
+}
+#poetry-origin {
+    float: right;
+    margin-right: 50px;
+}
+
+#jumbotron-text {
+    min-height: 120px;
+    /* max-width: 400px; */
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: left;
+}
+
+.block-span {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    /* background-color: coral; */
+    transform: rotateX(90deg);
+    animation: as 2s forwards;
+}
+
+.smoke-and-ashes {
+    transform: rotateZ(45deg);
+    opacity: 0;
+    transition: all 1s;
+}
+
+@keyframes as {
+    from {}
+    to {
+        transform: rotateX(0deg);
+    }
+}
+.caozuo {
+    transition: all 0.5s;
+}
+.caozuo:hover {
+    color: #16a085;
+}
